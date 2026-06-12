@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Flutter & Dart 入門 — ゼロから学ぼう</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/dracula.min.css" />
 </head>
 <body>
 
@@ -35,7 +37,7 @@
     <div class="hero-inner">
       <p class="hero-eyebrow">プログラミング未経験でも大丈夫</p>
       <h1 class="hero-title">Flutter & Dart を<br>ゼロから学ぼう。</h1>
-      <p class="hero-subtitle">スマホアプリもWebアプリも、1つの言語で作れる。<br>基礎からていねいに、いっしょに進んでいこう。</p>
+      <p class="hero-subtitle">読んで・書いて・動かす。<br>ブラウザだけで今すぐはじめられる。</p>
       <div class="hero-actions">
         <a href="#dart" class="btn btn-primary">学習をはじめる</a>
         <a href="#about" class="btn btn-secondary">詳しく見る</a>
@@ -73,9 +75,9 @@
           <p>Googleが作ったUI開発フレームワーク。1つのコードでiPhone・Android・Web・PCのアプリを同時に作れる、いま最も注目されているツールです。</p>
         </div>
         <div class="card">
-          <div class="card-icon">🚀</div>
-          <h3>なぜFlutter？</h3>
-          <p>普通はiOSとAndroidで別々にアプリを作る必要があります。でもFlutterなら1つ書くだけでどちらでも動く。時間もコストも半分以下になります。</p>
+          <div class="card-icon">✏️</div>
+          <h3>このサイトの使い方</h3>
+          <p>各レッスンを読んだら、下の練習問題でコードを書いて実行してみよう。インストール不要、ブラウザだけで動きます。</p>
         </div>
       </div>
 
@@ -115,11 +117,12 @@
     <div class="container">
       <p class="section-eyebrow">STEP 1</p>
       <h2 class="section-title">Dart 入門</h2>
-      <p class="section-desc">プログラミングの基本をDartで学びます。難しい言葉は使いません。</p>
+      <p class="section-desc">プログラミングの基本をDartで学びます。各レッスルの最後に練習問題があります。</p>
 
       <div class="lessons">
 
-        <div class="lesson-card" data-index="0">
+        <!-- Lesson 1 -->
+        <div class="lesson-card">
           <div class="lesson-header">
             <div class="lesson-meta">
               <span class="lesson-num">Lesson 1</span>
@@ -133,7 +136,7 @@
             <div class="lesson-content">
               <div class="concept">
                 <h4>コンピューターは命令通りに動く</h4>
-                <p>コンピューターはとても賢そうに見えますが、実は自分では何も考えられません。人間が書いた命令（プログラム）の通りにしか動きません。だからプログラムを書く = コンピューターへの指示書を作る、ということです。</p>
+                <p>コンピューターはとても賢そうに見えますが、実は自分では何も考えられません。人間が書いた命令（プログラム）の通りにしか動きません。</p>
               </div>
               <div class="concept">
                 <h4>Dartの最初の一歩</h4>
@@ -150,11 +153,44 @@
                   <div class="explain-item"><code>{ }</code> → 命令のまとまりを表す波カッコ</div>
                 </div>
               </div>
+
+              <!-- 練習問題 -->
+              <div class="exercise-section">
+                <div class="ex-header">
+                  <span class="ex-badge">✏️ 練習問題</span>
+                  <h4>出力してみよう</h4>
+                  <p><code>print()</code> を使って <strong>「こんにちは、Flutter！」</strong> と表示してみよう。</p>
+                </div>
+                <div class="ex-editor-wrap">
+                  <div class="ex-toolbar">
+                    <span class="ex-filename">main.dart</span>
+                    <div class="ex-btns">
+                      <button class="ex-hint-btn" data-hint="print('こんにちは、Flutter！'); と書いてみよう。シングルクォート ' を忘れずに！">💡 ヒント</button>
+                      <button class="ex-reset-btn">↺ リセット</button>
+                      <button class="ex-run-btn">▶ 実行</button>
+                    </div>
+                  </div>
+                  <textarea class="dart-editor" data-expected="こんにちは、Flutter！">void main() {
+  // ここにコードを書こう
+
+}</textarea>
+                  <div class="ex-hint-box" style="display:none;"></div>
+                  <div class="ex-output">
+                    <div class="ex-output-bar">
+                      <span>出力</span>
+                      <span class="ex-status"></span>
+                    </div>
+                    <pre class="ex-output-text placeholder">▶ 実行ボタンを押すと、ここに結果が表示されます</pre>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
 
-        <div class="lesson-card" data-index="1">
+        <!-- Lesson 2 -->
+        <div class="lesson-card">
           <div class="lesson-header">
             <div class="lesson-meta">
               <span class="lesson-num">Lesson 2</span>
@@ -167,25 +203,14 @@
           <div class="lesson-body">
             <div class="lesson-content">
               <div class="concept">
-                <h4>変数とは？</h4>
-                <p>変数は「名前のついた箱」です。数字や文字など、いろんな情報を入れておけます。</p>
-              </div>
-              <div class="concept">
                 <h4>変数の書き方</h4>
                 <div class="code-block">
                   <div class="code-label">Dart</div>
                   <pre><code><span class="kw">void</span> <span class="fn">main</span>() {
-  <span class="comment">// 文字列（String）</span>
-  <span class="type">String</span> name = <span class="str">'たろう'</span>;
-
-  <span class="comment">// 整数（int）</span>
-  <span class="type">int</span> age = <span class="num">20</span>;
-
-  <span class="comment">// 小数（double）</span>
-  <span class="type">double</span> height = <span class="num">170.5</span>;
-
-  <span class="comment">// 真か偽か（bool）</span>
-  <span class="type">bool</span> isStudent = <span class="kw">true</span>;
+  <span class="type">String</span> name = <span class="str">'たろう'</span>;   <span class="comment">// 文字列</span>
+  <span class="type">int</span> age = <span class="num">20</span>;             <span class="comment">// 整数</span>
+  <span class="type">double</span> height = <span class="num">170.5</span>;   <span class="comment">// 小数</span>
+  <span class="type">bool</span> isStudent = <span class="kw">true</span>;   <span class="comment">// 真か偽か</span>
 
   <span class="fn">print</span>(<span class="str">'名前: $name, 年齢: $age'</span>);
 }</code></pre>
@@ -195,26 +220,53 @@
                   文字列の中に変数を入れるには <code>$変数名</code> と書きます。これを「文字列補間」といいます。
                 </div>
               </div>
-              <div class="concept">
-                <h4>varで型を省略できる</h4>
-                <div class="code-block">
-                  <div class="code-label">Dart</div>
-                  <pre><code><span class="kw">var</span> name = <span class="str">'はなこ'</span>; <span class="comment">// Dartが自動でStringと判断</span>
-<span class="kw">var</span> score = <span class="num">100</span>;    <span class="comment">// Dartが自動でintと判断</span></code></pre>
+
+              <!-- 練習問題 -->
+              <div class="exercise-section">
+                <div class="ex-header">
+                  <span class="ex-badge">✏️ 練習問題</span>
+                  <h4>自己紹介を作ろう</h4>
+                  <p>変数 <code>name</code> と <code>age</code> を自分のものに変えて、<strong>「私はXXです。XX歳です。」</strong> と表示しよう。</p>
+                </div>
+                <div class="ex-editor-wrap">
+                  <div class="ex-toolbar">
+                    <span class="ex-filename">main.dart</span>
+                    <div class="ex-btns">
+                      <button class="ex-hint-btn" data-hint="name と age の '' や 0 の部分を自分の名前・年齢に変えてみよう。print の $name と $age はそのままでOK！">💡 ヒント</button>
+                      <button class="ex-reset-btn">↺ リセット</button>
+                      <button class="ex-run-btn">▶ 実行</button>
+                    </div>
+                  </div>
+                  <textarea class="dart-editor">void main() {
+  String name = '';  // ここに自分の名前を入れよう
+  int age = 0;       // ここに年齢を入れよう
+
+  print('私は$nameです。$age歳です。');
+}</textarea>
+                  <div class="ex-hint-box" style="display:none;"></div>
+                  <div class="ex-output">
+                    <div class="ex-output-bar">
+                      <span>出力</span>
+                      <span class="ex-status"></span>
+                    </div>
+                    <pre class="ex-output-text placeholder">▶ 実行ボタンを押すと、ここに結果が表示されます</pre>
+                  </div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
 
-        <div class="lesson-card" data-index="2">
+        <!-- Lesson 3 -->
+        <div class="lesson-card">
           <div class="lesson-header">
             <div class="lesson-meta">
               <span class="lesson-num">Lesson 3</span>
               <span class="lesson-tag">基礎</span>
             </div>
             <h3>条件分岐 — もし〜なら</h3>
-            <p>状況によって処理を変えたいときに使います。日常の「もし雨なら傘を持つ」と同じ考え方。</p>
+            <p>状況によって処理を変えたいときに使います。</p>
             <button class="lesson-toggle">詳しく見る ↓</button>
           </div>
           <div class="lesson-body">
@@ -233,27 +285,61 @@
   } <span class="kw">else</span> {
     <span class="fn">print</span>(<span class="str">'もっと勉強が必要です'</span>);
   }
-  <span class="comment">// → 'もう少しがんばろう' と表示される</span>
 }</code></pre>
                 </div>
-                <div class="code-explain">
-                  <div class="explain-item"><code>if (条件)</code> → 条件が「正しい」ときに実行</div>
-                  <div class="explain-item"><code>else if (条件)</code> → 上が外れて、この条件が正しいとき</div>
-                  <div class="explain-item"><code>else</code> → どれも当てはまらないとき</div>
+              </div>
+
+              <!-- 練習問題 -->
+              <div class="exercise-section">
+                <div class="ex-header">
+                  <span class="ex-badge">✏️ 練習問題</span>
+                  <h4>条件分岐を完成させよう</h4>
+                  <p><code>___</code> の部分を埋めて、scoreが90以上なら「S評価」、70以上なら「A評価」、それ以外なら「B評価」と表示しよう。</p>
+                </div>
+                <div class="ex-editor-wrap">
+                  <div class="ex-toolbar">
+                    <span class="ex-filename">main.dart</span>
+                    <div class="ex-btns">
+                      <button class="ex-hint-btn" data-hint="score が 90以上かどうかは score >= 90 と書くよ。else if を使って70以上の条件も書いてみよう。">💡 ヒント</button>
+                      <button class="ex-reset-btn">↺ リセット</button>
+                      <button class="ex-run-btn">▶ 実行</button>
+                    </div>
+                  </div>
+                  <textarea class="dart-editor" data-expected="A評価">void main() {
+  int score = 75;
+
+  if (score >= ___) {       // 90以上の条件
+    print('S評価');
+  } else if (score >= ___) { // 70以上の条件
+    print('A評価');
+  } else {
+    print('B評価');
+  }
+}</textarea>
+                  <div class="ex-hint-box" style="display:none;"></div>
+                  <div class="ex-output">
+                    <div class="ex-output-bar">
+                      <span>出力</span>
+                      <span class="ex-status"></span>
+                    </div>
+                    <pre class="ex-output-text placeholder">▶ 実行ボタンを押すと、ここに結果が表示されます</pre>
+                  </div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
 
-        <div class="lesson-card" data-index="3">
+        <!-- Lesson 4 -->
+        <div class="lesson-card">
           <div class="lesson-header">
             <div class="lesson-meta">
               <span class="lesson-num">Lesson 4</span>
               <span class="lesson-tag">基礎</span>
             </div>
             <h3>繰り返し — ループ</h3>
-            <p>同じ処理を何度も繰り返すときに使います。「10回挨拶する」を10行書かなくてよくなります。</p>
+            <p>同じ処理を何度も繰り返すときに使います。</p>
             <button class="lesson-toggle">詳しく見る ↓</button>
           </div>
           <div class="lesson-body">
@@ -263,37 +349,65 @@
                 <div class="code-block">
                   <div class="code-label">Dart</div>
                   <pre><code><span class="kw">void</span> <span class="fn">main</span>() {
-  <span class="comment">// 1から5まで数える</span>
   <span class="kw">for</span> (<span class="type">int</span> i = <span class="num">1</span>; i <= <span class="num">5</span>; i++) {
     <span class="fn">print</span>(<span class="str">'$i 回目！'</span>);
   }
-}
-<span class="comment">// 出力:
-// 1 回目！
-// 2 回目！
-// ...
-// 5 回目！</span></code></pre>
+}</code></pre>
+                </div>
+                <div class="code-explain">
+                  <div class="explain-item"><code>int i = 1</code> → iを1からスタート</div>
+                  <div class="explain-item"><code>i &lt;= 5</code> → iが5以下の間くり返す</div>
+                  <div class="explain-item"><code>i++</code> → 1回終わるたびにiを1増やす</div>
                 </div>
               </div>
-              <div class="concept">
-                <h4>リストと一緒に使う</h4>
-                <div class="code-block">
-                  <div class="code-label">Dart</div>
-                  <pre><code><span class="kw">void</span> <span class="fn">main</span>() {
-  <span class="type">List</span>&lt;<span class="type">String</span>&gt; fruits = [<span class="str">'りんご'</span>, <span class="str">'みかん'</span>, <span class="str">'ぶどう'</span>];
 
-  <span class="kw">for</span> (<span class="kw">var</span> fruit <span class="kw">in</span> fruits) {
-    <span class="fn">print</span>(fruit);
+              <!-- 練習問題 -->
+              <div class="exercise-section">
+                <div class="ex-header">
+                  <span class="ex-badge">✏️ 練習問題</span>
+                  <h4>1から10まで表示しよう</h4>
+                  <p><code>___</code> を埋めて、1から10まで順番に表示されるようにしよう。</p>
+                </div>
+                <div class="ex-editor-wrap">
+                  <div class="ex-toolbar">
+                    <span class="ex-filename">main.dart</span>
+                    <div class="ex-btns">
+                      <button class="ex-hint-btn" data-hint="i <= ___ の ___ を 10 にしよう。あと i++ は「iを1増やす」という意味だよ。">💡 ヒント</button>
+                      <button class="ex-reset-btn">↺ リセット</button>
+                      <button class="ex-run-btn">▶ 実行</button>
+                    </div>
+                  </div>
+                  <textarea class="dart-editor" data-expected="1
+2
+3
+4
+5
+6
+7
+8
+9
+10">void main() {
+  for (int i = 1; i <= ___; i++) {
+    print(i);
   }
-}
-<span class="comment">// 出力: りんご / みかん / ぶどう</span></code></pre>
+}</textarea>
+                  <div class="ex-hint-box" style="display:none;"></div>
+                  <div class="ex-output">
+                    <div class="ex-output-bar">
+                      <span>出力</span>
+                      <span class="ex-status"></span>
+                    </div>
+                    <pre class="ex-output-text placeholder">▶ 実行ボタンを押すと、ここに結果が表示されます</pre>
+                  </div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
 
-        <div class="lesson-card" data-index="4">
+        <!-- Lesson 5 -->
+        <div class="lesson-card">
           <div class="lesson-header">
             <div class="lesson-meta">
               <span class="lesson-num">Lesson 5</span>
@@ -309,71 +423,134 @@
                 <h4>関数の書き方</h4>
                 <div class="code-block">
                   <div class="code-label">Dart</div>
-                  <pre><code><span class="comment">// 関数を定義する</span>
-<span class="type">String</span> <span class="fn">greet</span>(<span class="type">String</span> name) {
+                  <pre><code><span class="type">String</span> <span class="fn">greet</span>(<span class="type">String</span> name) {
   <span class="kw">return</span> <span class="str">'こんにちは、$name さん！'</span>;
 }
 
 <span class="kw">void</span> <span class="fn">main</span>() {
-  <span class="comment">// 関数を呼び出す</span>
-  <span class="type">String</span> message = <span class="fn">greet</span>(<span class="str">'たろう'</span>);
-  <span class="fn">print</span>(message); <span class="comment">// こんにちは、たろう さん！</span>
-
-  <span class="fn">print</span>(<span class="fn">greet</span>(<span class="str">'はなこ'</span>)); <span class="comment">// こんにちは、はなこ さん！</span>
+  <span class="fn">print</span>(<span class="fn">greet</span>(<span class="str">'たろう'</span>));  <span class="comment">// こんにちは、たろう さん！</span>
+  <span class="fn">print</span>(<span class="fn">greet</span>(<span class="str">'はなこ'</span>));  <span class="comment">// こんにちは、はなこ さん！</span>
 }</code></pre>
                 </div>
-                <div class="code-explain">
-                  <div class="explain-item"><code>String</code>（戻り値の型） → 関数が返す値の種類</div>
-                  <div class="explain-item"><code>greet</code> → 関数の名前（自由につけられる）</div>
-                  <div class="explain-item"><code>String name</code> → 引数（関数に渡す値）</div>
-                  <div class="explain-item"><code>return</code> → この値を返す、という意味</div>
+              </div>
+
+              <!-- 練習問題 -->
+              <div class="exercise-section">
+                <div class="ex-header">
+                  <span class="ex-badge">✏️ 練習問題</span>
+                  <h4>掛け算関数を完成させよう</h4>
+                  <p><code>multiply()</code> 関数の中身を完成させて、<strong>12</strong> と <strong>30</strong> が表示されるようにしよう。</p>
+                </div>
+                <div class="ex-editor-wrap">
+                  <div class="ex-toolbar">
+                    <span class="ex-filename">main.dart</span>
+                    <div class="ex-btns">
+                      <button class="ex-hint-btn" data-hint="return の後に a * b と書こう。* は掛け算の記号だよ。">💡 ヒント</button>
+                      <button class="ex-reset-btn">↺ リセット</button>
+                      <button class="ex-run-btn">▶ 実行</button>
+                    </div>
+                  </div>
+                  <textarea class="dart-editor" data-expected="12
+30">int multiply(int a, int b) {
+  return ___;  // a と b を掛け算しよう
+}
+
+void main() {
+  print(multiply(3, 4));   // 12 になるはず
+  print(multiply(5, 6));   // 30 になるはず
+}</textarea>
+                  <div class="ex-hint-box" style="display:none;"></div>
+                  <div class="ex-output">
+                    <div class="ex-output-bar">
+                      <span>出力</span>
+                      <span class="ex-status"></span>
+                    </div>
+                    <pre class="ex-output-text placeholder">▶ 実行ボタンを押すと、ここに結果が表示されます</pre>
+                  </div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
 
-        <div class="lesson-card" data-index="5">
+        <!-- Lesson 6 -->
+        <div class="lesson-card">
           <div class="lesson-header">
             <div class="lesson-meta">
               <span class="lesson-num">Lesson 6</span>
               <span class="lesson-tag">中級</span>
             </div>
             <h3>クラスとオブジェクト</h3>
-            <p>関連するデータや処理をひとまとめにする「設計図」のようなもの。これがわかるとプログラムがぐっと整理されます。</p>
+            <p>関連するデータや処理をひとまとめにする「設計図」のようなもの。</p>
             <button class="lesson-toggle">詳しく見る ↓</button>
           </div>
           <div class="lesson-body">
             <div class="lesson-content">
               <div class="concept">
-                <h4>クラスとは？</h4>
-                <p>たとえば「人間」というクラスを作るとき、人間には「名前」「年齢」があって「話す」「歩く」などの動作があります。クラスはこのような情報と動作をまとめる「設計図」です。</p>
+                <h4>クラスの書き方</h4>
                 <div class="code-block">
                   <div class="code-label">Dart</div>
-                  <pre><code><span class="comment">// クラスの定義（設計図）</span>
-<span class="kw">class</span> <span class="type">Person</span> {
+                  <pre><code><span class="kw">class</span> <span class="type">Person</span> {
   <span class="type">String</span> name;
   <span class="type">int</span> age;
 
-  <span class="comment">// コンストラクタ（オブジェクトを作るときに呼ばれる）</span>
   <span class="type">Person</span>(<span class="kw">this</span>.name, <span class="kw">this</span>.age);
 
-  <span class="comment">// メソッド（クラスの中の関数）</span>
   <span class="kw">void</span> <span class="fn">introduce</span>() {
     <span class="fn">print</span>(<span class="str">'私は$nameです。$age歳です。'</span>);
   }
 }
 
 <span class="kw">void</span> <span class="fn">main</span>() {
-  <span class="comment">// オブジェクトを作る（設計図から実体を生み出す）</span>
   <span class="kw">var</span> taro = <span class="type">Person</span>(<span class="str">'たろう'</span>, <span class="num">20</span>);
-  <span class="kw">var</span> hanako = <span class="type">Person</span>(<span class="str">'はなこ'</span>, <span class="num">18</span>);
-
-  taro.<span class="fn">introduce</span>();   <span class="comment">// 私はたろうです。20歳です。</span>
-  hanako.<span class="fn">introduce</span>(); <span class="comment">// 私ははなこです。18歳です。</span>
+  taro.<span class="fn">introduce</span>();  <span class="comment">// 私はたろうです。20歳です。</span>
 }</code></pre>
                 </div>
               </div>
+
+              <!-- 練習問題 -->
+              <div class="exercise-section">
+                <div class="ex-header">
+                  <span class="ex-badge">✏️ 練習問題</span>
+                  <h4>Dogクラスを完成させよう</h4>
+                  <p><code>bark()</code> メソッドの中身を書いて、<strong>「ポチ が ワン！と鳴いた」</strong> と表示させよう。</p>
+                </div>
+                <div class="ex-editor-wrap">
+                  <div class="ex-toolbar">
+                    <span class="ex-filename">main.dart</span>
+                    <div class="ex-btns">
+                      <button class="ex-hint-btn" data-hint="print('$name が ワン！と鳴いた'); と書いてみよう。$name は変数の中身（ポチ）に置き換えられるよ。">💡 ヒント</button>
+                      <button class="ex-reset-btn">↺ リセット</button>
+                      <button class="ex-run-btn">▶ 実行</button>
+                    </div>
+                  </div>
+                  <textarea class="dart-editor" data-expected="ポチ が ワン！と鳴いた">class Dog {
+  String name;
+
+  Dog(this.name);
+
+  void bark() {
+    // 「(name) が ワン！と鳴いた」と表示しよう
+
+  }
+}
+
+void main() {
+  var dog = Dog('ポチ');
+  dog.bark();
+}</textarea>
+                  <div class="ex-hint-box" style="display:none;"></div>
+                  <div class="ex-output">
+                    <div class="ex-output-bar">
+                      <span>出力</span>
+                      <span class="ex-status"></span>
+                    </div>
+                    <pre class="ex-output-text placeholder">▶ 実行ボタンを押すと、ここに結果が表示されます</pre>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -387,11 +564,11 @@
     <div class="container">
       <p class="section-eyebrow">STEP 2</p>
       <h2 class="section-title">Flutter 入門</h2>
-      <p class="section-desc">Dartの基礎ができたら、いよいよFlutterでアプリを作ります。</p>
+      <p class="section-desc">Dartの基礎ができたら、いよいよFlutterでアプリを作ります。FlutterのUIはDartPadで動かせます。</p>
 
       <div class="lessons">
 
-        <div class="lesson-card" data-index="0">
+        <div class="lesson-card">
           <div class="lesson-header">
             <div class="lesson-meta">
               <span class="lesson-num">Lesson 1</span>
@@ -404,49 +581,19 @@
           <div class="lesson-body">
             <div class="lesson-content">
               <div class="concept">
-                <h4>Flutterの世界観</h4>
-                <p>Flutterのアプリは、Widgetを入れ子にして画面を作ります。まるでレゴブロックを積み重ねるように。</p>
-                <div class="widget-tree">
-                  <div class="tree-node root">MyApp</div>
-                  <div class="tree-children">
-                    <div class="tree-branch">
-                      <div class="tree-node">MaterialApp</div>
-                      <div class="tree-children">
-                        <div class="tree-branch">
-                          <div class="tree-node">Scaffold</div>
-                          <div class="tree-children">
-                            <div class="tree-branch">
-                              <div class="tree-node leaf">AppBar</div>
-                            </div>
-                            <div class="tree-branch">
-                              <div class="tree-node leaf">Text('Hello!')</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="concept">
                 <h4>最初のFlutterアプリ</h4>
                 <div class="code-block">
                   <div class="code-label">Dart (Flutter)</div>
                   <pre><code><span class="kw">import</span> <span class="str">'package:flutter/material.dart'</span>;
 
-<span class="kw">void</span> <span class="fn">main</span>() {
-  <span class="fn">runApp</span>(<span class="kw">const</span> <span class="type">MyApp</span>());
-}
+<span class="kw">void</span> <span class="fn">main</span>() => <span class="fn">runApp</span>(<span class="kw">const</span> <span class="type">MyApp</span>());
 
 <span class="kw">class</span> <span class="type">MyApp</span> <span class="kw">extends</span> <span class="type">StatelessWidget</span> {
   <span class="kw">const</span> <span class="type">MyApp</span>({<span class="kw">super</span>.key});
-
   <span class="type">Widget</span> <span class="fn">build</span>(<span class="type">BuildContext</span> context) {
     <span class="kw">return</span> <span class="type">MaterialApp</span>(
       home: <span class="type">Scaffold</span>(
-        appBar: <span class="type">AppBar</span>(
-          title: <span class="kw">const</span> <span class="type">Text</span>(<span class="str">'最初のアプリ'</span>),
-        ),
+        appBar: <span class="type">AppBar</span>(title: <span class="kw">const</span> <span class="type">Text</span>(<span class="str">'最初のアプリ'</span>)),
         body: <span class="kw">const</span> <span class="type">Center</span>(
           child: <span class="type">Text</span>(<span class="str">'こんにちは、Flutter！'</span>),
         ),
@@ -456,18 +603,25 @@
 }</code></pre>
                 </div>
               </div>
+              <a class="dartpad-link" href="https://dartpad.dev/?id=e7076b40fb17a0fa899f9f7a154a02e8" target="_blank" rel="noopener">
+                <span>🚀</span>
+                <div>
+                  <strong>DartPadで動かしてみる</strong>
+                  <span>ブラウザ上でFlutterアプリが動きます（別タブで開きます）</span>
+                </div>
+              </a>
             </div>
           </div>
         </div>
 
-        <div class="lesson-card" data-index="1">
+        <div class="lesson-card">
           <div class="lesson-header">
             <div class="lesson-meta">
               <span class="lesson-num">Lesson 2</span>
               <span class="lesson-tag">基礎</span>
             </div>
             <h3>よく使うWidget一覧</h3>
-            <p>これだけ知っていれば大抵のUIが作れます。まずはよく使うものを覚えましょう。</p>
+            <p>これだけ知っていれば大抵のUIが作れます。</p>
             <button class="lesson-toggle">詳しく見る ↓</button>
           </div>
           <div class="lesson-body">
@@ -522,14 +676,14 @@
           </div>
         </div>
 
-        <div class="lesson-card" data-index="2">
+        <div class="lesson-card">
           <div class="lesson-header">
             <div class="lesson-meta">
               <span class="lesson-num">Lesson 3</span>
               <span class="lesson-tag">基礎</span>
             </div>
             <h3>StatelessWidget vs StatefulWidget</h3>
-            <p>Flutterには2種類のWidgetがあります。これを理解すると「動く」アプリが作れるようになります。</p>
+            <p>Flutterには2種類のWidgetがあります。これがわかると「動く」アプリが作れます。</p>
             <button class="lesson-toggle">詳しく見る ↓</button>
           </div>
           <div class="lesson-body">
@@ -537,31 +691,16 @@
               <div class="compare">
                 <div class="compare-item">
                   <h4>StatelessWidget</h4>
-                  <p>状態（変化）を持たないWidget。一度表示したら変わらない部品に使います。</p>
-                  <p><strong>例：</strong> タイトル文字、アイコン、固定のレイアウト</p>
-                  <div class="code-block">
-                    <div class="code-label">Dart</div>
-                    <pre><code><span class="kw">class</span> <span class="type">MyTitle</span> <span class="kw">extends</span> <span class="type">StatelessWidget</span> {
-  <span class="kw">const</span> <span class="type">MyTitle</span>({<span class="kw">super</span>.key});
-
-  <span class="type">Widget</span> <span class="fn">build</span>(<span class="type">BuildContext</span> context) {
-    <span class="kw">return</span> <span class="type">Text</span>(<span class="str">'変わらないタイトル'</span>);
-  }
-}</code></pre>
-                  </div>
+                  <p>変化しない部品。タイトル文字やアイコンなど。</p>
                 </div>
                 <div class="compare-item">
                   <h4>StatefulWidget</h4>
-                  <p>状態（変化）を持つWidget。ボタンを押すと数字が増えるなど、変化する部品に使います。</p>
-                  <p><strong>例：</strong> カウンター、フォーム、チェックボックス</p>
-                  <div class="code-block">
-                    <div class="code-label">Dart</div>
-                    <pre><code><span class="kw">class</span> <span class="type">Counter</span> <span class="kw">extends</span> <span class="type">StatefulWidget</span> {
-  <span class="kw">const</span> <span class="type">Counter</span>({<span class="kw">super</span>.key});
-  <span class="type">State</span> <span class="fn">createState</span>() => _CounterState();
-}
-
-<span class="kw">class</span> _CounterState <span class="kw">extends</span> <span class="type">State</span>&lt;<span class="type">Counter</span>&gt; {
+                  <p>変化する部品。カウンター、フォームなど。<code>setState()</code> で画面を更新。</p>
+                </div>
+              </div>
+              <div class="code-block" style="margin-top:16px">
+                <div class="code-label">カウンターアプリ（StatefulWidget）</div>
+                <pre><code><span class="kw">class</span> _CounterState <span class="kw">extends</span> <span class="type">State</span>&lt;<span class="type">Counter</span>&gt; {
   <span class="type">int</span> count = <span class="num">0</span>;
 
   <span class="type">Widget</span> <span class="fn">build</span>(<span class="type">BuildContext</span> context) {
@@ -574,66 +713,14 @@
     ]);
   }
 }</code></pre>
-                  </div>
+              </div>
+              <a class="dartpad-link" href="https://dartpad.dev/" target="_blank" rel="noopener">
+                <span>🚀</span>
+                <div>
+                  <strong>DartPadでカウンターアプリを試す</strong>
+                  <span>上のコードをDartPadに貼り付けて動かしてみよう</span>
                 </div>
-              </div>
-              <div class="info-box">
-                <strong>💡 setState() って何？</strong><br>
-                Flutterに「状態が変わったから画面を更新して！」と伝える命令です。setState() の中で変数を変えると、自動的に画面が再描画されます。
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="lesson-card" data-index="3">
-          <div class="lesson-header">
-            <div class="lesson-meta">
-              <span class="lesson-num">Lesson 4</span>
-              <span class="lesson-tag">基礎</span>
-            </div>
-            <h3>レイアウトの基本</h3>
-            <p>Column・Row・Stack・Paddingを組み合わせて、思い通りの画面を作りましょう。</p>
-            <button class="lesson-toggle">詳しく見る ↓</button>
-          </div>
-          <div class="lesson-body">
-            <div class="lesson-content">
-              <div class="concept">
-                <h4>Padding — 余白をつける</h4>
-                <div class="code-block">
-                  <div class="code-label">Dart</div>
-                  <pre><code><span class="type">Padding</span>(
-  padding: <span class="type">EdgeInsets</span>.<span class="fn">all</span>(<span class="num">16</span>),   <span class="comment">// 四方16pxの余白</span>
-  child: <span class="type">Text</span>(<span class="str">'余白つきテキスト'</span>),
-)</code></pre>
-                </div>
-              </div>
-              <div class="concept">
-                <h4>Column + mainAxisAlignment — 縦並びの整列</h4>
-                <div class="code-block">
-                  <div class="code-label">Dart</div>
-                  <pre><code><span class="type">Column</span>(
-  mainAxisAlignment: <span class="type">MainAxisAlignment</span>.center,
-  crossAxisAlignment: <span class="type">CrossAxisAlignment</span>.start,
-  children: [
-    <span class="type">Text</span>(<span class="str">'1行目'</span>),
-    <span class="type">SizedBox</span>(height: <span class="num">8</span>),   <span class="comment">// スペーサー</span>
-    <span class="type">Text</span>(<span class="str">'2行目'</span>),
-  ],
-)</code></pre>
-                </div>
-              </div>
-              <div class="concept">
-                <h4>Expanded — 残りスペースを埋める</h4>
-                <div class="code-block">
-                  <div class="code-label">Dart</div>
-                  <pre><code><span class="type">Row</span>(
-  children: [
-    <span class="type">Expanded</span>(child: <span class="type">Text</span>(<span class="str">'左側（残り全部）'</span>)),
-    <span class="type">Text</span>(<span class="str">'右側（必要な分だけ）'</span>),
-  ],
-)</code></pre>
-                </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -663,14 +750,14 @@
             <div class="step-badge">Step 1</div>
             <div class="step-detail">
               <h4>Flutter SDKをインストール</h4>
-              <p><a href="https://docs.flutter.dev/get-started/install" target="_blank" rel="noopener">flutter.dev</a> から自分のOS用のSDKをダウンロードしてインストールします。</p>
+              <p><a href="https://docs.flutter.dev/get-started/install" target="_blank" rel="noopener">flutter.dev</a> から自分のOS用のSDKをダウンロード。</p>
             </div>
           </div>
           <div class="step-item">
             <div class="step-badge">Step 2</div>
             <div class="step-detail">
               <h4>VS Codeをインストール</h4>
-              <p>コードを書くエディタ。<a href="https://code.visualstudio.com" target="_blank" rel="noopener">code.visualstudio.com</a> からダウンロード。Flutter拡張機能も入れましょう。</p>
+              <p><a href="https://code.visualstudio.com" target="_blank" rel="noopener">code.visualstudio.com</a> からダウンロード。Flutter拡張機能も追加しよう。</p>
             </div>
           </div>
           <div class="step-item">
@@ -689,66 +776,14 @@ flutter run</code></pre>
             <div class="step-badge">Step 4</div>
             <div class="step-detail">
               <h4>コードを書こう</h4>
-              <p><code>lib/main.dart</code> を以下のコードに書き換えてみましょう。</p>
-              <div class="code-block">
-                <div class="code-label">lib/main.dart</div>
-                <pre><code><span class="kw">import</span> <span class="str">'package:flutter/material.dart'</span>;
-
-<span class="kw">void</span> <span class="fn">main</span>() => <span class="fn">runApp</span>(<span class="kw">const</span> <span class="type">MyApp</span>());
-
-<span class="kw">class</span> <span class="type">MyApp</span> <span class="kw">extends</span> <span class="type">StatelessWidget</span> {
-  <span class="kw">const</span> <span class="type">MyApp</span>({<span class="kw">super</span>.key});
-  <span class="type">Widget</span> <span class="fn">build</span>(<span class="type">BuildContext</span> context) {
-    <span class="kw">return</span> <span class="type">MaterialApp</span>(
-      title: <span class="str">'カウンターアプリ'</span>,
-      theme: <span class="type">ThemeData</span>(colorSchemeSeed: <span class="type">Colors</span>.blue),
-      home: <span class="kw">const</span> <span class="type">CounterPage</span>(),
-    );
-  }
-}
-
-<span class="kw">class</span> <span class="type">CounterPage</span> <span class="kw">extends</span> <span class="type">StatefulWidget</span> {
-  <span class="kw">const</span> <span class="type">CounterPage</span>({<span class="kw">super</span>.key});
-  <span class="type">State</span> <span class="fn">createState</span>() => _CounterPageState();
-}
-
-<span class="kw">class</span> _CounterPageState <span class="kw">extends</span> <span class="type">State</span>&lt;<span class="type">CounterPage</span>&gt; {
-  <span class="type">int</span> _count = <span class="num">0</span>;
-
-  <span class="kw">void</span> <span class="fn">_increment</span>() {
-    <span class="fn">setState</span>(() => _count++);
-  }
-
-  <span class="type">Widget</span> <span class="fn">build</span>(<span class="type">BuildContext</span> context) {
-    <span class="kw">return</span> <span class="type">Scaffold</span>(
-      appBar: <span class="type">AppBar</span>(title: <span class="kw">const</span> <span class="type">Text</span>(<span class="str">'カウンター'</span>)),
-      body: <span class="type">Center</span>(
-        child: <span class="type">Column</span>(
-          mainAxisAlignment: <span class="type">MainAxisAlignment</span>.center,
-          children: [
-            <span class="kw">const</span> <span class="type">Text</span>(<span class="str">'ボタンを押した回数'</span>),
-            <span class="type">Text</span>(
-              <span class="str">'$_count'</span>,
-              style: <span class="type">Theme</span>.<span class="fn">of</span>(context).textTheme.displayLarge,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: <span class="type">FloatingActionButton</span>(
-        onPressed: _increment,
-        child: <span class="kw">const</span> <span class="type">Icon</span>(<span class="type">Icons</span>.add),
-      ),
-    );
-  }
-}</code></pre>
-              </div>
+              <p><code>lib/main.dart</code> を開いてカウンターアプリのコードを書いてみよう。</p>
             </div>
           </div>
         </div>
 
         <div class="info-box success">
-          <strong>🎉 おめでとうございます！</strong><br>
-          これであなたははじめてのFlutterアプリを作りました。ボタンを押すたびに数字が増えるのを確認してみてください。このコードにはDartとFlutterの基本がすべて詰まっています。
+          <strong>🎉 ここまで来たらあとは作るだけ！</strong><br>
+          Dart入門のレッスンをすべてクリアできたら、Flutterでどんなアプリでも作れる基礎が身についています。
         </div>
       </div>
     </div>
@@ -765,13 +800,15 @@ flutter run</code></pre>
         <div class="footer-links">
           <a href="https://dart.dev" target="_blank" rel="noopener">Dart公式</a>
           <a href="https://flutter.dev" target="_blank" rel="noopener">Flutter公式</a>
-          <a href="https://docs.flutter.dev" target="_blank" rel="noopener">ドキュメント</a>
+          <a href="https://dartpad.dev" target="_blank" rel="noopener">DartPad</a>
         </div>
       </div>
       <p class="footer-copy">作って学ぼう。Flutter & Dart</p>
     </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
